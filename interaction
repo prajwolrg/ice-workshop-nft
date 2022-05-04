@@ -1,0 +1,10 @@
+// npx hardhat console --network frost
+
+// const ethers = require("ethers");
+// const wallet = new ethers.Wallet('0x6143cec18c40118fc3900469a8e5fe75439c3d786eed953e99e627b2b148095f')
+
+const MyToken = await ethers.getContractFactory("MyToken");
+const mytoken = await MyToken.attach('0x57d7D17bf6B13395Bb682DF78d961a62565A8855')
+
+const MarketPlace = await ethers.getContractFactory("MarketPlace");
+const market = await MarketPlace.attach('0x7d5F6EF8118470Fc850191E6ab1d06c134D5132a')
